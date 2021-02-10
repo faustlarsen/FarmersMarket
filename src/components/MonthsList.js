@@ -1,5 +1,6 @@
 import React from 'react';
-import Months from 'Months';
+import Months from './Months';
+import PropTypes from "prop-types";
 
 const availableProduce = [  
     {  
@@ -270,19 +271,29 @@ const availableProduce = [
     }
  ];
 
- function MonthsList() {
+ function MonthsList(props) {
      return (
          <React.Fragment>
+             <div class="months">
              <h3>Seasonal Produce</h3>
-             {Months.map((months, index) =>
+             {availableProduce.map((month, index) =>
                 <Months
-                month={months.month}
-                selection={months.selection}     //array within array?     
-                key={index} />  
+                // month={availableProduce[props.currentIndex].month}
+                selection={availableProduce.selection.map(veggie=><ul>{veggie}</ul>)} 
+                // selection={availableProduce[props.currentIndex].selection}
+            
+                />  
+               
 
-             )}
+         )}  
+             </div>
          </React.Fragment>
      )
  }
+
+MonthsList.protoTypes = {
+    currentIndex: PropTypes.number
+
+}
 
  export default MonthsList;

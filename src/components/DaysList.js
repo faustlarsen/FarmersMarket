@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Days from 'Days';
+import Days from './Days';
 
 const marketSchedule = [  
     {  
@@ -44,15 +44,18 @@ const marketSchedule = [
    function DaysList() {
        return (
            <React.Fragment>
+               <div class="days">
                <h3>Market Schedule</h3>
-               {Days.map((days, index) =>
-                    <Days
+               {marketSchedule.map((days, index) =>
+                <Days
                     day={days.day}
                     location={days.location}
                     hours={days.hours}
+                    booth={days.booth}
                     key={index} />
                     
                )}
+             </div>
            </React.Fragment>
        )
    }

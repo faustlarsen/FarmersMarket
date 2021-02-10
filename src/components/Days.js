@@ -8,14 +8,17 @@ function Days(props) {
             <h4>{props.day}</h4>
             <h4>{props.location}</h4>
             <h4>{props.hours}</h4>
+            <h4>Booth: {props.booth}</h4>
         </React.Fragment>
-    )
+        
+    );
 }
 
-Days.PropTypes = {
-    day: PropTypes.string,   //not sure about int or string?
+Days.propTypes = {
+    day: PropTypes.string,   
     location: PropTypes.string,
     hours: PropTypes.string,
-}
+    booth: PropTypes.string
+};
 
 export default Days;

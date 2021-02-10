@@ -1,0 +1,21 @@
+.days {
+    flex: 50%;
+    margin: 5pt;
+    border: solid black 1px;
+    padding: 5pt;
+
+}
+
+.months {
+    flex: 50%;
+    margin: 5pt;
+    border: solid black 1px;
+    padding: 5pt;
+  
+}
+
+.splash {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+}

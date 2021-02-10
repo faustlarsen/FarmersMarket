@@ -6,14 +6,16 @@ function Months(props) {
     return (
         <React.Fragment>
             <h4>{props.month}</h4>
-            <h4>{props.selection}</h4> {/* array within array */}
+            <h4>{props.selection.map((produce, index) =>
+              <ul>key={index} {produce}</ul>
+            )}</h4> 
         </React.Fragment>
     )
 }
 
-    Months.PropTypes = {
+    Months.propTypes = {
         month: PropTypes.string,
-        selection: PropTypes.string /* array within array */
+        selection: PropTypes.array 
     }
 
 
